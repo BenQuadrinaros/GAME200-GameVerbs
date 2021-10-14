@@ -6,12 +6,15 @@ using UnityEngine.SceneManagement;
 
 public class UIManager : MonoBehaviour
 {
+    //Interface Buttons
     public Button bu_pause;
-    public GameObject panel_pause;
     public Button bu_resume;
     public Button bu_cook;
     public Button bu_quit;
 
+    //Interface elements
+    public GameObject panel_pause;
+    public Text te_cook;
     public Scrollbar sc_hunger;
     public static float score;
 
@@ -30,7 +33,7 @@ public class UIManager : MonoBehaviour
         if(sc_hunger != null) {
             sc_hunger.size += Time.deltaTime / 120;
             if(sc_hunger.size >= 1) {
-                Debug.Log("Too hungry to chase!");
+                te_cook.text = "Too hungry to keep chasing!";
                 PauseGame();
             }
         }
@@ -39,6 +42,7 @@ public class UIManager : MonoBehaviour
     void PauseGame() {
         Time.timeScale = 0;
         panel_pause.SetActive(true);
+        Cursor.visible = true;
     }
 
     void ResumeGame() {

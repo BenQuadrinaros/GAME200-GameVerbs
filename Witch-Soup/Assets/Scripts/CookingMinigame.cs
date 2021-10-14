@@ -7,9 +7,15 @@ public class CookingMinigame : MonoBehaviour
 {
     private bool active;
     private List<string> veggie_list;
-    public Text text_score;
     private float launch_timer;
     public GameObject Prefab_CutVeggie;
+    public Transform cauldron;
+    public Transform cursor_knife;
+
+    //Tracking score elements
+    public Text text_score;
+    public Text text_pauseScore;
+    private int remaining_veggies;
 
     //Different veggie textures
     public Sprite texture_cabbage;
@@ -27,6 +33,17 @@ public class CookingMinigame : MonoBehaviour
         veggie_list.Add("tomato");
         veggie_list.Add("pumpkin");
         launch_timer = 3 + Random.value;
+
+        //Count remaining veggies
+        remaining_veggies = 0;
+        foreach(string veggie_name in veggie_list) {
+            if(PlayerPrefs.HasKey(veggie_name)) {
+                remaining_veggies += PlayerPrefs.GetInt(veggie_name);
+            }
+        }
+
+        //Hide mouse cursor
+        Cursor.visible = false;
     }
 
     // Update is called once per frame
@@ -34,13 +51,15 @@ public class CookingMinigame : MonoBehaviour
     {
         //Update veggie launcher
         if(active) {
-            Debug.Log(this+" is active");
+            //Debug.Log(this+" is active");
             if(PlayerPrefs.HasKey(veggie_list[0])) {
-                transform.localPosition += new Vector3(Time.deltaTime*3*Mathf.Sin(Time.time), 0, 0);
+                transform.localPosition += new Vector3(Time.deltaTime*Mathf.Sin(Time.time), 0, 0);
                 launch_timer -= Time.deltaTime;
                 if(launch_timer < 0) {
                     //Create and fling the correct veggie
                     GameObject veggie = Instantiate(Prefab_CutVeggie, transform);
+                    veggie.transform.localScale = new Vector3(6, 6, 1);
+                    veggie.GetComponent<SpriteRenderer>().sortingOrder = 4;
                     if(veggie_list[0] == "cabbage") {
                         veggie.GetComponent<SpriteRenderer>().sprite = texture_cabbage;
                     } else if(veggie_list[0] == "mushroom") {
@@ -70,12 +89,19 @@ public class CookingMinigame : MonoBehaviour
                 veggie_list.RemoveAt(0);
                 if(veggie_list.Count == 0) {
                     active = false;
+                    text_pauseScore.text = "There's no veggies left!\nCurrent score: "+UIManager.score;
                 }
             }
         }
 
+        //Update cauldron
+
+        //Update mouse position
+        cursor_knife.localPosition = new Vector3(22.5f*(Input.mousePosition.x-20)/Screen.width - 11f, 10*Input.mousePosition.y/Screen.height - 5, 0);
+
         //Detect mouse clicks
         if (Input.GetMouseButtonDown(0)) {
+            cursor_knife.localRotation = Quaternion.Euler(0, 0, 45);
             Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             Vector2 mousePos2D = new Vector2(mousePos.x, mousePos.y);
 
@@ -84,6 +110,8 @@ public class CookingMinigame : MonoBehaviour
             if(hit.collider != null) {
                 hit.collider.gameObject.GetComponent<VeggieLaunched>().getClicked();
             }
+        } else if(!Input.GetMouseButton(0)) {
+            cursor_knife.localRotation = Quaternion.Euler(0, 0, -45);
         }
 
         //Update score
