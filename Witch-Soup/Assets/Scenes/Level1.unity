@@ -1698,6 +1698,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 63}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!1 &210970158
 GameObject:
   m_ObjectHideFlags: 0
@@ -1841,6 +1842,8 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6891514863533617158, guid: 722054632a976c04fa6b01812a31d9e2, type: 3}
   m_PrefabInstance: {fileID: 1695994607}
   m_PrefabAsset: {fileID: 0}
+=======
+>>>>>>> parent of 5c400c3 (runnig vegies)
 =======
 >>>>>>> parent of 5c400c3 (runnig vegies)
 =======
@@ -3162,6 +3165,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!1 &420881423
 GameObject:
   m_ObjectHideFlags: 0
@@ -3196,6 +3200,8 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+=======
+>>>>>>> parent of 5c400c3 (runnig vegies)
 =======
 >>>>>>> parent of 5c400c3 (runnig vegies)
 =======
@@ -8967,9 +8973,13 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 280}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!1001 &1299401902
 PrefabInstance:
 --- !u!1 &1305423618
+=======
+--- !u!1 &1319006223
+>>>>>>> parent of 5c400c3 (runnig vegies)
 =======
 --- !u!1 &1319006223
 >>>>>>> parent of 5c400c3 (runnig vegies)
@@ -9077,8 +9087,13 @@ Transform:
   m_GameObject: {fileID: 1305423618}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_LocalPosition: {x: 0.033177212, y: -1.3378823, z: 37.37315}
   m_LocalScale: {x: 10.240249, y: 9.13305, z: 1}
+=======
+  m_LocalPosition: {x: 0.08924574, y: 7.2332463, z: 3139.8943}
+  m_LocalScale: {x: 2.317246, y: 1.399868, z: 1}
+>>>>>>> parent of 5c400c3 (runnig vegies)
   m_Children: []
   m_Father: {fileID: 420881424}
   m_RootOrder: 3
@@ -9667,6 +9682,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1365231709}
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
   m_LocalPosition: {x: -1.24, y: -0.14, z: 3139.8943}
 =======
@@ -9675,6 +9691,10 @@ Transform:
 <<<<<<< HEAD
 >>>>>>> parent of 5c400c3 (runnig vegies)
 =======
+>>>>>>> parent of 5c400c3 (runnig vegies)
+=======
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -3.0907543, y: -0.36675346, z: 3139.8943}
 >>>>>>> parent of 5c400c3 (runnig vegies)
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -10605,6 +10625,7 @@ SpriteRenderer:
   m_SpriteSortPoint: 0
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!1001 &1468843283
 PrefabInstance:
 --- !u!1 &1465866597
@@ -10752,6 +10773,8 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6891514863533617158, guid: 722054632a976c04fa6b01812a31d9e2, type: 3}
   m_PrefabInstance: {fileID: 1397407285}
   m_PrefabAsset: {fileID: 0}
+=======
+>>>>>>> parent of 5c400c3 (runnig vegies)
 =======
 >>>>>>> parent of 5c400c3 (runnig vegies)
 =======
@@ -11853,9 +11876,12 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_LocalPosition: {x: 10.8565, y: 1.9745, z: 3139.8943}
   m_LocalScale: {x: 3.0343535, y: 2.7657878, z: 1}
 =======
+=======
+>>>>>>> parent of 5c400c3 (runnig vegies)
 =======
 >>>>>>> parent of 5c400c3 (runnig vegies)
   m_LocalPosition: {x: 10.089246, y: 2.5932465, z: 3139.8943}
@@ -12396,6 +12422,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!1001 &1730716061
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12618,6 +12645,8 @@ Transform:
   m_Father: {fileID: 420881424}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+=======
+>>>>>>> parent of 5c400c3 (runnig vegies)
 =======
 >>>>>>> parent of 5c400c3 (runnig vegies)
 =======
