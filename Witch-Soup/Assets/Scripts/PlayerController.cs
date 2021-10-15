@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    //Neccessary components
     private Rigidbody2D rbody;
     public GameObject Prefab_Knife;
     private float cut_cooldown;
