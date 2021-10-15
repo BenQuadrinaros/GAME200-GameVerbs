@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6814003536332772487}
   - component: {fileID: 8923211272894487718}
   m_Layer: 0
-  m_Name: chase_veggie
+  m_Name: chase_mushroom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -145,3 +145,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49bfc720a53153344882237cc3963149, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 4
+  remaining_pieces: 2
+  Prefab_Fragment: {fileID: 3466925093562264748, guid: 4461f33c66a6683439be2e9444bf312f, type: 3}
+  sprite_fragment: {fileID: 21300000, guid: 67cfcd32503349f43922340b74455442, type: 3}
