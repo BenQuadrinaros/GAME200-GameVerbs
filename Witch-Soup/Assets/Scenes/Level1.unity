@@ -1696,9 +1696,6 @@ Transform:
   m_Father: {fileID: 2051671648}
   m_RootOrder: 75
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 63}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 --- !u!1 &210970158
 GameObject:
   m_ObjectHideFlags: 0
@@ -1842,12 +1839,10 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6891514863533617158, guid: 722054632a976c04fa6b01812a31d9e2, type: 3}
   m_PrefabInstance: {fileID: 1695994607}
   m_PrefabAsset: {fileID: 0}
-=======
->>>>>>> parent of 5c400c3 (runnig vegies)
-=======
->>>>>>> parent of 5c400c3 (runnig vegies)
-=======
->>>>>>> parent of 5c400c3 (runnig vegies)
+
+
+
+
 --- !u!1001 &258905851
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3163,9 +3158,6 @@ Transform:
   m_Father: {fileID: 701379707}
   m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 --- !u!1 &420881423
 GameObject:
   m_ObjectHideFlags: 0
@@ -3200,12 +3192,10 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-=======
->>>>>>> parent of 5c400c3 (runnig vegies)
-=======
->>>>>>> parent of 5c400c3 (runnig vegies)
-=======
->>>>>>> parent of 5c400c3 (runnig vegies)
+
+
+
+
 --- !u!1 &422297846
 GameObject:
   m_ObjectHideFlags: 0
@@ -8971,18 +8961,15 @@ Transform:
   m_Father: {fileID: 2051671648}
   m_RootOrder: 62
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 280}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 --- !u!1001 &1299401902
 PrefabInstance:
 --- !u!1 &1305423618
-=======
+
 --- !u!1 &1319006223
->>>>>>> parent of 5c400c3 (runnig vegies)
-=======
+
 --- !u!1 &1319006223
->>>>>>> parent of 5c400c3 (runnig vegies)
+
+--- !u!1 &1319006223
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8990,18 +8977,11 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-<<<<<<< HEAD
   - component: {fileID: 1305423621}
   - component: {fileID: 1305423620}
   - component: {fileID: 1305423619}
   m_Layer: 0
   m_Name: flames_2
-=======
-  - component: {fileID: 1319006225}
-  - component: {fileID: 1319006224}
-  m_Layer: 0
-  m_Name: backyard_39 (8)
->>>>>>> parent of 5c400c3 (runnig vegies)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9086,14 +9066,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1305423618}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-<<<<<<< HEAD
-<<<<<<< HEAD
   m_LocalPosition: {x: 0.033177212, y: -1.3378823, z: 37.37315}
   m_LocalScale: {x: 10.240249, y: 9.13305, z: 1}
-=======
+
+
   m_LocalPosition: {x: 0.08924574, y: 7.2332463, z: 3139.8943}
   m_LocalScale: {x: 2.317246, y: 1.399868, z: 1}
->>>>>>> parent of 5c400c3 (runnig vegies)
   m_Children: []
   m_Father: {fileID: 420881424}
   m_RootOrder: 3
@@ -9155,8 +9133,7 @@ GameObject:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 722054632a976c04fa6b01812a31d9e2, type: 3}
-=======
->>>>>>> parent of 5c400c3 (runnig vegies)
+
 --- !u!1 &1319006223
 GameObject:
   m_ObjectHideFlags: 0
@@ -9234,8 +9211,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1319006223}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-=======
->>>>>>> parent of 5c400c3 (runnig vegies)
+
   m_LocalPosition: {x: 0.08924574, y: 7.2332463, z: 3139.8943}
   m_LocalScale: {x: 2.317246, y: 1.399868, z: 1}
   m_Children: []
@@ -9681,21 +9657,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1365231709}
-<<<<<<< HEAD
-<<<<<<< HEAD
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
   m_LocalPosition: {x: -1.24, y: -0.14, z: 3139.8943}
-=======
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -3.0907543, y: -0.36675346, z: 3139.8943}
-<<<<<<< HEAD
->>>>>>> parent of 5c400c3 (runnig vegies)
-=======
->>>>>>> parent of 5c400c3 (runnig vegies)
-=======
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -3.0907543, y: -0.36675346, z: 3139.8943}
->>>>>>> parent of 5c400c3 (runnig vegies)
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2051671648}
@@ -10623,9 +10590,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 --- !u!1001 &1468843283
 PrefabInstance:
 --- !u!1 &1465866597
@@ -10773,12 +10737,10 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6891514863533617158, guid: 722054632a976c04fa6b01812a31d9e2, type: 3}
   m_PrefabInstance: {fileID: 1397407285}
   m_PrefabAsset: {fileID: 0}
-=======
->>>>>>> parent of 5c400c3 (runnig vegies)
-=======
->>>>>>> parent of 5c400c3 (runnig vegies)
-=======
->>>>>>> parent of 5c400c3 (runnig vegies)
+
+
+
+
 --- !u!1 &1480238046
 GameObject:
   m_ObjectHideFlags: 0
@@ -11874,19 +11836,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1650166712}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
   m_LocalPosition: {x: 10.8565, y: 1.9745, z: 3139.8943}
   m_LocalScale: {x: 3.0343535, y: 2.7657878, z: 1}
-=======
-=======
->>>>>>> parent of 5c400c3 (runnig vegies)
-=======
->>>>>>> parent of 5c400c3 (runnig vegies)
+
+
+
+
   m_LocalPosition: {x: 10.089246, y: 2.5932465, z: 3139.8943}
   m_LocalScale: {x: 2.0113704, y: 1.9407676, z: 1}
->>>>>>> parent of 5c400c3 (runnig vegies)
   m_Children: []
   m_Father: {fileID: 2051671648}
   m_RootOrder: 48
@@ -12420,9 +12377,6 @@ Transform:
   m_Father: {fileID: 2051671648}
   m_RootOrder: 63
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 --- !u!1001 &1730716061
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12645,12 +12599,10 @@ Transform:
   m_Father: {fileID: 420881424}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-=======
->>>>>>> parent of 5c400c3 (runnig vegies)
-=======
->>>>>>> parent of 5c400c3 (runnig vegies)
-=======
->>>>>>> parent of 5c400c3 (runnig vegies)
+
+
+
+
 --- !u!1 &1739749296
 GameObject:
   m_ObjectHideFlags: 0
