@@ -27,7 +27,6 @@ public class RunningVeggie : MonoBehaviour
 
         float playerDistance = Mathf.Abs(Vector2.Distance(transform.position, player.transform.position));
 
-        Debug.Log(playerDistance);
         if (playerDistance <= triggerRange)
         {
             patrolling = false;

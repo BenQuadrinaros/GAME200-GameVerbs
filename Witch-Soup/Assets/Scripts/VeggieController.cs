@@ -4,22 +4,20 @@ using UnityEngine;
 
 public class VeggieController : MonoBehaviour
 {
-    public float speed;
     public float remaining_pieces;
     private float invinc_timer;
     public GameObject Prefab_Fragment;
-    public Sprite sprite_fragment;
+    private AudioSource SFX;
+    private RunningVeggie running;
+    private ParticleSystem particles;
 
     // Start is called before the first frame update
     void Start()
     {
-        if(speed == 0) {
-            speed = 1.5f;
-        }
-        if(remaining_pieces == 0) {
-            remaining_pieces = 2;
-        }
-        invinc_timer = 0.25f;
+        invinc_timer = 0.75f;
+        SFX = GetComponent<AudioSource>();
+        running = GetComponent<RunningVeggie>();
+        particles = GetComponent<ParticleSystem>();
     }
 
     // Update is called once per frame
@@ -31,22 +29,21 @@ public class VeggieController : MonoBehaviour
     void OnTriggerEnter2D(Collider2D col) {
         if(col.name.Contains("Knife")) {
             Debug.Log("Player cut a "+gameObject.name);
+            SFX.Play();
             // UIManager.score += 5;
-            GameObject temp = Instantiate(Prefab_Fragment);
-            temp.GetComponent<SpriteRenderer>().sprite = sprite_fragment;
-            temp.transform.position = transform.position + new Vector3(Random.value, Random.value, 0);
-            temp.transform.localScale *= 4;
-
-            if(remaining_pieces > 1) {
-                speed += 0.5f;
-                --remaining_pieces;
-            } else {
-                temp = Instantiate(Prefab_Fragment);
-                temp.GetComponent<SpriteRenderer>().sprite = sprite_fragment;
+            if(remaining_pieces > 0 && !(invinc_timer > 0)) {
+                particles.Play();
+                GameObject temp = Instantiate(Prefab_Fragment);
                 temp.transform.position = transform.position + new Vector3(Random.value, Random.value, 0);
-                temp.transform.localScale *= 4;
-                Destroy(gameObject);
+                VeggieController veg = temp.GetComponent<VeggieController>();
+                veg.remaining_pieces = 0;
+                running.runningSpeed += 0.5f;
+                veg.GetComponent<RunningVeggie>().runningSpeed = running.runningSpeed;
+                --remaining_pieces;
+                invinc_timer = 0.75f;
             }
+        } else if(col.name == "cauldron") {
+            Destroy(gameObject);
         }
     }
 }
