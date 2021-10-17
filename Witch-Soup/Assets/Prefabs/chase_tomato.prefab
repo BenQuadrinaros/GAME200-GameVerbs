@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 895804477886085511}
   - component: {fileID: 6598034313990567947}
   - component: {fileID: 8782872829339165932}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: chase_tomato
   m_TagString: Untagged
   m_Icon: {fileID: 0}

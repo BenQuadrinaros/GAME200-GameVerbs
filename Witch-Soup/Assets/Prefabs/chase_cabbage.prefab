@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 5208413790134640720}
   - component: {fileID: -8335410085759014291}
   - component: {fileID: -136236442407550646}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: chase_cabbage
   m_TagString: Untagged
   m_Icon: {fileID: 0}

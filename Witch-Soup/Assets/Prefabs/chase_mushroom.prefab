@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: -4149826209910891746}
   - component: {fileID: 8963467623927403713}
   - component: {fileID: 2361334053852276986}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: chase_mushroom
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 8258602806404931725}
   - component: {fileID: -385861233129012994}
   - component: {fileID: -678550544594138206}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: chase_pumpkin
   m_TagString: Untagged
   m_Icon: {fileID: 0}

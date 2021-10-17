@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6621584475869843427}
   - component: {fileID: 6772598893910081271}
   - component: {fileID: 5913964982301166567}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: veggie_fragment
   m_TagString: Untagged
   m_Icon: {fileID: 0}
