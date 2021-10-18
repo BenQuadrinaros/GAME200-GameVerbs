@@ -42,7 +42,7 @@ public class VeggieController : MonoBehaviour
                 --remaining_pieces;
                 invinc_timer = 0.75f;
             }
-        } else if(col.name == "cauldron") {
+        } else if(col.name == "cauldron" && remaining_pieces == 0) {
             Destroy(gameObject);
         }
     }
