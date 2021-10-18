@@ -27,11 +27,11 @@ public class VeggieController : MonoBehaviour
     }
 
     void OnTriggerEnter2D(Collider2D col) {
-        if(col.name.Contains("Knife")) {
-            Debug.Log("Player cut a "+gameObject.name);
+        if (col.name.Contains("Knife")) {
+            Debug.Log("Player cut a " + gameObject.name);
             SFX.Play();
             // UIManager.score += 5;
-            if(remaining_pieces > 0 && !(invinc_timer > 0)) {
+            if (remaining_pieces > 0 && !(invinc_timer > 0)) {
                 particles.Play();
                 GameObject temp = Instantiate(Prefab_Fragment);
                 temp.transform.position = transform.position + new Vector3(Random.value, Random.value, 0);
@@ -42,7 +42,9 @@ public class VeggieController : MonoBehaviour
                 --remaining_pieces;
                 invinc_timer = 0.75f;
             }
-        } else if(col.name == "cauldron" && remaining_pieces == 0) {
+        } else if (col.name == "cauldron" && remaining_pieces != 0) {
+            running.direction *= -1;
+        } else if (col.name == "cauldron" && remaining_pieces == 0) {
             Destroy(gameObject);
         }
     }
