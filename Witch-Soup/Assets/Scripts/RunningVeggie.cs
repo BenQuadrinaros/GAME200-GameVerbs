@@ -13,18 +13,93 @@ public class RunningVeggie : MonoBehaviour
     public bool patrolling = true;
 
     private Rigidbody2D veggie;
+
+    public Transform upWallCheckPoint;
+    public Transform downWallCheckPoint;
+    public Transform leftWallCheckPoint;
+    public Transform rightWallCheckPoint;
+    bool UisWalled;
+    bool DisWalled;
+    bool LisWalled;
+    bool RisWalled;
+    public float circleRadius = 0.2f;
+    public LayerMask wall;
+    bool isStacked = false;
     // Start is called before the first frame update
     void Start()
     {
         veggie = GetComponent<Rigidbody2D>();
         player = GameObject.FindGameObjectWithTag("Player");
         veggie.freezeRotation = true;
+
     }
 
     // Update is called once per frame
     void Update()
     {
+        checkWalled();
+        if (isStacked)
+        {
+            backToTrack();
+        }
+        else {
+            runningStates();
+        }
 
+        
+
+        
+
+    }
+
+    void patrol()
+    {
+        veggie.velocity = direction * patrolSpeed;
+    }
+
+    void running()
+    {
+        veggie.velocity = direction * runningSpeed;
+    }
+
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+
+        if (collision.gameObject.tag == "turingPoints") {
+            isStacked = false;
+            turningPoint point = collision.GetComponent<turningPoint>();
+
+            if (patrolling)
+            {
+            
+                int i = Random.Range(0, point.availableDirections.Count);
+                direction = point.availableDirections[i];
+
+            }
+            else
+            {
+                Vector2 tempDirection = new Vector2(0, 0);
+                float maxDistance = 0;
+
+                foreach (Vector2 availableDirection in point.availableDirections)
+                {
+                    Vector3 newPosition = transform.position + new Vector3(availableDirection.x, availableDirection.y, 0.0f);
+                    float distance = (player.transform.position - newPosition).sqrMagnitude;
+
+                    if (distance > maxDistance)
+                    {
+                    tempDirection = availableDirection;
+                    maxDistance = distance;
+                    }
+                }
+            direction = tempDirection;
+
+            } 
+        }
+    }
+
+    private void runningStates() {
         float playerDistance = Mathf.Abs(Vector2.Distance(transform.position, player.transform.position));
 
         if (playerDistance <= triggerRange)
@@ -46,48 +121,45 @@ public class RunningVeggie : MonoBehaviour
         }
     }
 
-    void patrol()
-    {
-        veggie.velocity = direction * patrolSpeed;
+    private void checkWalled() {
+        LisWalled = Physics2D.OverlapCircle(leftWallCheckPoint.position, circleRadius, wall);
+        RisWalled = Physics2D.OverlapCircle(rightWallCheckPoint.position, circleRadius, wall);
+        UisWalled = Physics2D.OverlapCircle(upWallCheckPoint.position, circleRadius, wall);
+        DisWalled = Physics2D.OverlapCircle(downWallCheckPoint.position, circleRadius, wall);
+
+        if (LisWalled && direction.x == -1) {
+            isStacked = true;
+        } else if (RisWalled && direction.x == 1) {
+            isStacked = true;
+        } else if (UisWalled && direction.y == 1) {
+            isStacked = true;
+        }else if (DisWalled && direction.y == -1) {
+            isStacked = true;
+        }
+    
+    
     }
 
-    void running()
-    {
-        veggie.velocity = direction * runningSpeed;
-    }
+    private void backToTrack() {
+        
+        float distanceToClosestPoint= Mathf.Infinity;
+        GameObject closestPoint = null;
 
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        turningPoint point = collision.GetComponent<turningPoint>();
-
-        if (patrolling)
+        GameObject[] turningPoints = GameObject.FindGameObjectsWithTag("turingPoints");
+        
+        foreach (GameObject point in turningPoints)
         {
-            if (collision.gameObject.tag == "turingPoints")
+            
+            float distance = (point.transform.position - transform.position).sqrMagnitude;
+
+            if (distance < distanceToClosestPoint)
             {
-                int i = Random.Range(0, point.availableDirections.Count);
-                direction = point.availableDirections[i];
+                distanceToClosestPoint = distance;
+                closestPoint = point;
             }
         }
-        else
-        {
-            Vector2 tempDirection = new Vector2(0, 0);
-            float maxDistance = 0;
 
-            foreach (Vector2 availableDirection in point.availableDirections)
-            {
-                Vector3 newPosition = transform.position + new Vector3(availableDirection.x, availableDirection.y, 0.0f);
-                float distance = (player.transform.position - newPosition).sqrMagnitude;
-
-                if (distance > maxDistance)
-                {
-                    tempDirection = availableDirection;
-                    maxDistance = distance;
-                }
-            }
-            direction = tempDirection;
-
-        }
+        veggie.position = Vector2.MoveTowards(transform.position, closestPoint.transform.position, runningSpeed * Time.deltaTime); ;
 
     }
 
