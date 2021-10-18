@@ -11,10 +11,22 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Menu.unity
     guid: 661a298207951cb4681f9351d16dac25
-  - enabled: 1
-    path: Assets/Scenes/Level 2.unity
+  - enabled: 0
+    path: Assets/Scenes/Level1.unity
     guid: 9c1d1068c981e3d4da700c0d22d66485
   - enabled: 1
     path: Assets/Scenes/Cooking.unity
     guid: 45e6613252714704ca8f86eaddae5601
+  - enabled: 1
+    path: Assets/Scenes/Level 1.unity
+    guid: 935c27dc4b1bcb342814319246478614
+  - enabled: 1
+    path: Assets/Scenes/Level 2.unity
+    guid: 68e1b008abe90c444b16f2e552c066d5
+  - enabled: 1
+    path: Assets/Scenes/Level 3.unity
+    guid: 8a2de76dbc2122745956ceb0598d501b
+  - enabled: 1
+    path: Assets/Scenes/Level 0.unity
+    guid: e994c59b07f6fd049b7a771eebb2a5cf
   m_configObjects: {}

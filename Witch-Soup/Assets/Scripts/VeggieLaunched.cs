@@ -24,7 +24,7 @@ public class VeggieLaunched : MonoBehaviour
     }
 
     public void getClicked() {
-        UIManager.score += 10 + Mathf.Floor(transform.localPosition.y);
+        UIManager.score += 10 + (int)Mathf.Floor(transform.localPosition.y);
         Destroy(gameObject);
     }
 }

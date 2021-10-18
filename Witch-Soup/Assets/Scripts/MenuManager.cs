@@ -31,7 +31,7 @@ public class MenuManager : MonoBehaviour
         //If we want to save data between games, we need to change this line
         PlayerPrefs.DeleteAll();
 
-        SceneManager.LoadSceneAsync("Level1");
+        SceneManager.LoadSceneAsync("Level 0");
     }
 
     void ShowCredits() {
