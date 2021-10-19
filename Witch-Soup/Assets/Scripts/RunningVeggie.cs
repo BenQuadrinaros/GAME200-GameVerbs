@@ -160,8 +160,15 @@ public class RunningVeggie : MonoBehaviour
         }
 
         veggie.position = Vector2.MoveTowards(transform.position, closestPoint.transform.position, runningSpeed * Time.deltaTime); ;
+        
+        if (veggie.position.x == closestPoint.transform.position.x && veggie.position.y == closestPoint.transform.position.y) {
+            isStacked = false; 
+        }
+
 
     }
+
+
 
 
 }
