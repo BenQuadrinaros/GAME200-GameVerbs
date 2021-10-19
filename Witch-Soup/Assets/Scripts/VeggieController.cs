@@ -10,6 +10,8 @@ public class VeggieController : MonoBehaviour
     private AudioSource SFX;
     private RunningVeggie running;
     private ParticleSystem particles;
+    private ParticleSystem.MainModule particles_main;
+    public Material ma_star;
 
     // Start is called before the first frame update
     void Start()
@@ -31,16 +33,26 @@ public class VeggieController : MonoBehaviour
             SFX.Play();
             if (remaining_pieces > 0 && !(invinc_timer > 0)) {
                 particles.Play();
-                transform.localScale *= 0.75f;
+                transform.localScale *= 0.9f;
                 GameObject temp = Instantiate(Prefab_Fragment);
                 temp.transform.position = transform.position + new Vector3(Random.value, Random.value, 0);
                 temp.transform.localScale = new Vector3(1.2f, 1.2f, 1.2f);
                 VeggieController veg = temp.GetComponent<VeggieController>();
                 veg.remaining_pieces = 0;
+                temp.GetComponent<ParticleSystemRenderer>().material = ma_star;
+                ParticleSystem parts = temp.GetComponent<ParticleSystem>();
+                ParticleSystem.MainModule parts_main = parts.main;
+                parts_main.loop = true;
+                parts.Play();
                 running.runningSpeed += 0.5f;
-                veg.GetComponent<RunningVeggie>().runningSpeed = running.runningSpeed;
+                temp.GetComponent<RunningVeggie>().runningSpeed = running.runningSpeed;
                 --remaining_pieces;
                 invinc_timer = 0.75f;
+            } else if(remaining_pieces == 0 && !particles_main.loop) {
+                transform.localScale = new Vector3(1.2f, 1.2f, 1.2f);
+                GetComponent<ParticleSystemRenderer>().material = ma_star;
+                particles_main.loop = true;
+                particles.Play();
             }
         } else if (col.name == "cauldron" && remaining_pieces != 0) {
             running.direction *= -1;

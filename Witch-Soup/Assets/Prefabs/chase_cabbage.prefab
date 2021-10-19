@@ -219,6 +219,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   remaining_pieces: 4
   Prefab_Fragment: {fileID: 4379817584790370073}
+  ma_star: {fileID: 2100000, guid: 2ffa234f6c737d54abd65678102199da, type: 2}
 --- !u!114 &2077423568382634017
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -984,14 +985,14 @@ ParticleSystem:
   ShapeModule:
     serializedVersion: 6
     enabled: 1
-    type: 4
+    type: 2
     angle: 25
     length: 5
     boxThickness: {x: 0, y: 0, z: 0}
     radiusThickness: 1
     donutRadius: 0.2
     m_Position: {x: 0, y: 0, z: 0}
-    m_Rotation: {x: 120, y: 0, z: 0}
+    m_Rotation: {x: 180, y: 0, z: 0}
     m_Scale: {x: 1, y: 1, z: 1}
     placementMode: 0
     m_MeshMaterialIndex: 0

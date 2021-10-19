@@ -9,6 +9,7 @@ public class MenuManager : MonoBehaviour
     public Button bu_play;
     public Button bu_credits;
     public Button bu_quit;
+    public GameObject credits_box;
 
     // Start is called before the first frame update
     void Start()
@@ -17,7 +18,6 @@ public class MenuManager : MonoBehaviour
         bu_play.onClick.AddListener( delegate{ StartGame(); });
         bu_credits.onClick.AddListener( delegate{ ShowCredits(); });
         bu_quit.onClick.AddListener( delegate{ Application.Quit(); });
-
 
     }
 
@@ -35,6 +35,6 @@ public class MenuManager : MonoBehaviour
     }
 
     void ShowCredits() {
-        Debug.Log("Empty, for now.");
+        credits_box.SetActive(!credits_box.activeSelf);
     }
 }
