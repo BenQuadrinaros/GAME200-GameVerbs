@@ -196,8 +196,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -236, y: -91}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchoredPosition: {x: -243, y: -84}
+  m_SizeDelta: {x: 130.6976, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &146682795
 GameObject:
@@ -3498,8 +3498,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.502, y: -0.5249}
-  m_SizeDelta: {x: 179.9982, y: 99.2753}
+  m_AnchoredPosition: {x: 2.2887, y: -0.8897}
+  m_SizeDelta: {x: 181.3878, y: 129.9729}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1995046733
 MonoBehaviour:
@@ -3539,9 +3539,10 @@ MonoBehaviour:
     Programming: Ben Rowland & Lu Wang
 
     Art:
-    Cassidy Landers & free art sources
+    Cassidy Landers, Sev_4, Kittens and Elves at Work, & opengameart.org
 
-    Sound: freesound.org'
+    Sound:
+    freesound.org'
 --- !u!222 &1995046734
 CanvasRenderer:
   m_ObjectHideFlags: 0
