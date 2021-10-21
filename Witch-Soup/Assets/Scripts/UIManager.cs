@@ -25,7 +25,7 @@ public class UIManager : MonoBehaviour
         //Add listener events
         bu_pause.onClick.AddListener( delegate{ PauseGame(); });
         bu_next.onClick.AddListener( delegate{ NextLevel(); });
-        bu_cook.onClick.AddListener( delegate{ MoveTo("Cooking"); });
+        bu_cook.onClick.AddListener( delegate{ MoveTo("Menu"); });
         bu_resume.onClick.AddListener( delegate{ ResumeGame(); });
         bu_quit.onClick.AddListener( delegate{ MoveTo("Menu"); });
 
