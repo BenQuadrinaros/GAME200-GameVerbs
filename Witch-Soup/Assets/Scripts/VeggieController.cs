@@ -10,7 +10,6 @@ public class VeggieController : MonoBehaviour
     private AudioSource SFX;
     private RunningVeggie running;
     private ParticleSystem particles;
-    private ParticleSystem.MainModule particles_main;
     public Material ma_star;
 
     // Start is called before the first frame update
@@ -31,10 +30,12 @@ public class VeggieController : MonoBehaviour
     void OnTriggerEnter2D(Collider2D col) {
         if (col.name.Contains("Knife")) {
             SFX.Play();
+            ParticleSystem.MainModule particles_main = particles.main;
             if (remaining_pieces > 0 && !(invinc_timer > 0)) {
                 particles.Play();
                 transform.localScale *= 0.9f;
                 GameObject temp = Instantiate(Prefab_Fragment);
+                --remaining_pieces;
                 temp.transform.position = transform.position + new Vector3(Random.value, Random.value, 0);
                 temp.transform.localScale = new Vector3(1.2f, 1.2f, 1.2f);
                 VeggieController veg = temp.GetComponent<VeggieController>();
@@ -44,9 +45,8 @@ public class VeggieController : MonoBehaviour
                 ParticleSystem.MainModule parts_main = parts.main;
                 parts_main.loop = true;
                 parts.Play();
-                running.runningSpeed += 0.5f;
-                temp.GetComponent<RunningVeggie>().runningSpeed = running.runningSpeed;
-                --remaining_pieces;
+                ++running.runningSpeed;
+                temp.GetComponent<RunningVeggie>().runningSpeed = running.runningSpeed + remaining_pieces;
                 invinc_timer = 0.75f;
             } else if(remaining_pieces == 0 && !particles_main.loop) {
                 transform.localScale = new Vector3(1.2f, 1.2f, 1.2f);

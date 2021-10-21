@@ -69,5 +69,10 @@ public class PlayerController : MonoBehaviour
                 cut_cooldown = 1;
             }
         }
+
+        //Cap velocity
+        if(Mathf.Abs(rbody.velocity[1]) > 10) {
+            rbody.AddForce(rbody.velocity/-4);
+        }
     }
 }

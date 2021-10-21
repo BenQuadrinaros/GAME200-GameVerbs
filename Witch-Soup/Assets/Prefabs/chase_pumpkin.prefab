@@ -270,7 +270,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   direction: {x: 1, y: 0}
   patrolSpeed: 2
-  runningSpeed: 4
+  runningSpeed: 5.5
   triggerRange: 6
   patrolling: 1
   upWallCheckPoint: {fileID: 2258838690986714334}
