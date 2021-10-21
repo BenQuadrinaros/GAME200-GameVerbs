@@ -26,19 +26,19 @@ public class PlayerController : MonoBehaviour
         //Keyboard movement
         if(Time.timeScale > 0) {
             if(Input.GetKey("up") || Input.GetKey("w")) {
-                rbody.AddForce(new Vector2(0, Time.timeScale * 2));
+                rbody.AddForce(new Vector2(0, Time.timeScale));
                 delta_movement += Vector3.up;
             }
             if(Input.GetKey("down") || Input.GetKey("s")) {
-                rbody.AddForce(new Vector2(0, Time.timeScale * -2));
+                rbody.AddForce(new Vector2(0, -Time.timeScale));
                 delta_movement -= Vector3.up;
             }
             if(Input.GetKey("left") || Input.GetKey("a")) {
-                rbody.AddForce(new Vector2(Time.timeScale * -2, 0));
+                rbody.AddForce(new Vector2(-Time.timeScale, 0));
                 delta_movement -= Vector3.right;
             }
             if(Input.GetKey("right") || Input.GetKey("d")) {
-                rbody.AddForce(new Vector2(Time.timeScale * 2, 0));
+                rbody.AddForce(new Vector2(Time.timeScale, 0));
                 delta_movement += Vector3.right;
             }
         }
